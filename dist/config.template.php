@@ -15,6 +15,12 @@ define('DB_NAME', 'aar');
 // Note the lack of trailing slash
 define('WEB_PATH', 'http://r3.local');
 
+// Path to map tiles, with trailing slash
+define('TILES_PATH', 'http://localhost:8080/');
+
+// Path to map icons, with trailing slash
+define('ICONS_PATH', 'https://r3icons.titanmods.xyz/');
+
 // Locale settings, the timezone should match your database server
 date_default_timezone_set('Europe/London');
 define('US_DATE_FORMAT', FALSE);

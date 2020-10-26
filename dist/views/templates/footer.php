@@ -2,6 +2,8 @@
 
     <script type="text/javascript">
         var webPath = '<?php echo WEB_PATH; ?>';
+        var tilesPath = '<?php echo TILES_PATH; ?>';
+        var iconsPath = '<?php echo ICONS_PATH; ?>';
         var configDefaults = { speed: <?php echo DEFAULT_PLAYBACK_SPEED; ?> };
     </script>
 

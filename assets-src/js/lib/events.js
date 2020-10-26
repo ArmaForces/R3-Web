@@ -1,6 +1,7 @@
-function Events() {
+function Events(iconsDomain) {
 
     this.list = {};
+    this.iconsDomain = iconsDomain;
 };
 
 Events.prototype.showNext = function() {
@@ -265,7 +266,7 @@ Events.prototype.projectileLaunch = function(eventData) {
 
         var projectileIcon = L.marker(map.rc.unproject([launchPos[0], launchPos[1]]), {
             icon: L.icon({
-                iconUrl: 'https://r3icons.titanmods.xyz/' + attacker.ammoType.toLowerCase() + '.png',
+                iconUrl: this.iconsDomain + attacker.ammoType.toLowerCase() + '.png',
                 iconSize: [30, 30],
                 iconAnchor: [15, 15],
                 className: 'projectile-' + attacker.ammoType.toLowerCase()

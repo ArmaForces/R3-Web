@@ -1,8 +1,8 @@
-function Map() {
+function Map(tileDomain) {
 
     this.terrain;
     this.zooming = false;
-    this.tileDomain = 'https://r3tiles-a.titanmods.xyz/';
+    this.tileDomain = tileDomain;
 };
 
 Map.prototype.init = function(terrainName, cb) {
@@ -60,11 +60,8 @@ Map.prototype.render = function(cb) {
     // We need to set an initial view for the tiles to render
     this.setView([this.config.height / 2, this.config.width / 2], this.config.initZoom);
 
-    // Inject sub domain support for faster tile loading (for those on non http/2 servers)
-    var tileUrl = "https://r3tiles-{s}.titanmods.xyz/";
-
     // Add our terrain generated tiles
-    this.layer = L.tileLayer(tileUrl + this.terrain + '/tiles/{z}/{x}/{y}.png', {
+    this.layer = L.tileLayer(this.tileDomain + this.terrain + '/tiles/{z}/{x}/{y}.png', {
         noWrap: true,
         maxNativeZoom: this.config.maxZoom,
         maxZoom: 10,
