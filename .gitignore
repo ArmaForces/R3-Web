@@ -5,4 +5,6 @@ tiles
 dist/config/r3.local.php
 dist/config/titanmods.xyz.php
 dist/config.php
+dist/assets/
+dist/cache/events/
 release/
