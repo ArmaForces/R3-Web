@@ -8,3 +8,5 @@ dist/config.php
 dist/assets/
 dist/cache/events/
 release/
+
+.idea/
