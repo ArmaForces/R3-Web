@@ -1,4 +1,4 @@
-function Markers() {
+function Markers(iconsDomain) {
 
     this.list = {};
     this.matchedIcons = {};
@@ -15,6 +15,7 @@ function Markers() {
 
     // Used to debug missing icons
     this.unknownClasses = [];
+    this.iconsDomain = iconsDomain;
 };
 
 Markers.prototype.setupLayers = function() {
@@ -152,7 +153,7 @@ Markers.prototype.add = function(unit, data, type, timeUpdated) {
         iconSize: [30, 30],
         iconAnchor: [15, 15],
         className: 'unit-marker unit-marker__class--' + iconClass + ' unit-marker--' + icon + ' unit-marker__id--' + markerId,
-        iconUrl: 'https://r3icons.titanmods.xyz/'
+        iconUrl: this.iconsDomain,
     };
 
     // This marker isn't on the map yet

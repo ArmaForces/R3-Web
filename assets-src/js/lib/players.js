@@ -1,4 +1,4 @@
-function Players() {
+function Players(iconsDomain) {
 
     this.masterList = {};
     this.currentList = {};
@@ -12,6 +12,7 @@ function Players() {
     this.updateTimer = null;
     this.updateLock = false;
     this.delayedUpdateTimer = null;
+    this.iconsDomain = iconsDomain;
 };
 
 Players.prototype.init = function() {
@@ -218,7 +219,7 @@ Players.prototype.updateList = function(forceUpdate) {
 
                 var playerData = self.getInfo(playerId);
 
-                var imgUrl = 'https://r3icons.titanmods.xyz/blank.png';
+                var imgUrl = this.iconsDomain + 'blank.png';
 
                 //console.log('p', playerData);
                 //console.log(markers.list);
