@@ -24,7 +24,7 @@ $headerTitle = UNIT_NAME;
 $metaImage = WEB_PATH . '/maps/' . strtolower($replayDetails->map) . '/tiles/0/0/0.png';
 $page = 'playback';
 
-$url = 'https://r3tiles-a.titanmods.xyz/config.json';
+$url = TILES_PATH . '/config.json';
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
